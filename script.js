@@ -205,9 +205,14 @@ function validateForm(){
 }
 
 /*========== EMAIL SEND ==========*/
-function sendEmail(){
 
-    event.preventDefault();
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prepreči privzeto vedenje obrazca
+
+    sendEmail();
+});
+
+function sendEmail(){
 
     (function(){
         emailjs.init("sAmflmlG041uwz56O");
