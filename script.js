@@ -37,11 +37,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-
-
-/*========== swiper ==========*/
-
-
 /*========== dark light mode ==========*/
 let darkModeIcon = document.querySelector('#darkMode-icon');
 
@@ -211,6 +206,9 @@ function validateForm(){
 
 /*========== EMAIL SEND ==========*/
 function sendEmail(){
+
+    event.preventDefault();
+
     (function(){
         emailjs.init("sAmflmlG041uwz56O");
     })();
@@ -272,7 +270,6 @@ function sendEmail(){
 }
 
 /*========== disable right-click on img ==========*/
-// Get all <img> elements on the page
 var images = document.querySelectorAll("img");
 
 // Loop through each <img> element and disable right-click
