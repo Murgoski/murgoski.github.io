@@ -474,7 +474,8 @@ span{
 }
 
 .portfolio-layer a i{
-    font-size: var(--main-color)
+    font-size: 2rem;
+    color: var(--main-color)
 }
 
 /*---------------------------------------- CONTACT SECTION ----------------------------------------*/
