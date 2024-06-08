@@ -19,7 +19,7 @@
 }
 
 .dark-mode{
-    --bg-color: #0b061f;
+    --bg-color: #121212;
     --text-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
 }
@@ -474,8 +474,7 @@ span{
 }
 
 .portfolio-layer a i{
-    font-size: 2rem;
-    color: var(--text-color)
+    font-size: var(--main-color)
 }
 
 /*---------------------------------------- CONTACT SECTION ----------------------------------------*/
