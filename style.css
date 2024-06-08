@@ -809,6 +809,16 @@ span{
     }
 }
 
+@media (max-width: 410px) {
+    .home .profession-container .overlay{
+        top: 75rem;
+        left: 50%;
+        right: 0;
+        transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
+        border-width: 23.9rem;
+    }
+}
+
 @media (max-width: 440px){
     html{
         font-size: 50%;
