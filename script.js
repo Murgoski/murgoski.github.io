@@ -283,3 +283,5 @@ images.forEach(function(image) {
         e.preventDefault();
     });
 });
+
+>>>>>>> ff36d60bb9d26afa6d41ef804fe1e212ebd5d4b0
