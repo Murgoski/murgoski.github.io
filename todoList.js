@@ -35,23 +35,23 @@ ScrollReveal().reveal('.about-content, .gallery-description.active', { origin: '
 
 const images = [
     {
-        src: 'images/asset1.jpg',
+        src: 'asset1.jpg',
         descriptionId: 'description1'
     },
     {
-        src:'images/asset2_blured.jpg',
+        src:'asset2_blured.jpg',
         descriptionId: 'description2'
     },
     {
-        src: 'images/asset4_blured.jpg',
+        src: 'asset4_blured.jpg',
         descriptionId: 'description3'
     },
     {
-        src: 'images/asset3.jpg',
+        src: 'asset3.jpg',
         descriptionId: 'description4'
     },
     {
-        src: 'images/asset5.jpg',
+        src: 'asset5.jpg',
         descriptionId: 'description5'
     }
 ];
