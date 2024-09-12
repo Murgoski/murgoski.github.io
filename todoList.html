@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset = "UTF-8">
+	<meta name = "author" content = "Aleksandar Murgoski"/>
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "website icon" type = "png" href = "images/tab_image.png" />
+    <title>To-do List - Website</title>
+
+    <!-- swiper css -->
+    <link rel =" stylesheet" href = "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "css/todoList.css">
+
+</head>
+
+<body>
+
+    <!-- about section design -->
+    <section class = "about" id = "about">
+        
+        <div class = "about-img">
+            <img src = "images/mobile-desktop.jpg" alt = "About-Image">
+        </div>
+
+        <div class = "about-content">
+            <h2 class = "heading">To-do <span>List</span></h2>
+            <h3>Your daily planner for every task!</h3>
+            <p>
+                Welcome to your own personal to-do List management website!  
+                Whether you are a busy professional, a student juggling assignments, or someone simply looking to enhance personal productivity, 
+                this website has got you covered. Developed with a passion for efficiency, this platform offers a range of basic features for task management. 
+            </p>
+
+            <p>
+                This website includes couple of main functionalities for easy task management:
+            </p>
+            <p>
+                <li><span>Add Personal Tasks: </span>Supercharge your productivity! Easily add your personal tasks with just a click. Stay on top of your game by organizing your to-dos effortlessly.</li>
+                <li><span>Labels for your Tasks: </span>Bring order to chaos! Categorize your tasks with labels. Whether it's work, personal, or a special project, our labeling feature lets you tailor your task management to fit your unique style.</li>
+                <li><span>Choose Date: </span>Time is of the essence! Set deadlines with a breeze by choosing the perfect date for each task.</li>
+                <li><span>Add Description: </span>Details matter! Add context and clarity to your tasks by providing rich descriptions. Jot down important notes – our description feature allows you to tailor each task to your specific needs.</li>
+            </p>
+
+            <!-- <p>
+                In addition to the To-Do List webpage, I developed a new Assessments webpage that is designed specifically for students. 
+                Here, you can effortlessly manage your school assessments and deadlines with simplicity. 
+                This dedicated space empowers you to organize important details such as assessment names, dates, times and additional information.
+            </p> -->
+
+            <p>
+                Watch a quick video to learn more about the To-do List, click <a href = "#" id = "openModalBtn" style = "text-decoration: none;"><span>here.</a>
+            </p>
+
+            <p>
+                To explore my To-do List website, please visit <a href = "https://murgoski.github.io/todolistweb/"><span>To-do List website.</span></a>
+            </p>
+        
+        </div>
+    
+        <div id = "myModal" class = "modal">
+            <div class = "modal-content">
+                <h3>To-do List <span>Video</span></h3>
+                <span class = "close">&times;</span>
+                <div class = "video-gallery">
+                    <video width = "700" controls poster = "images/video-poster.jpg">
+                        <source src = "images/video-asset.mp4" type = "video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- gallery section design -->
+    <section class = "gallery-section" id = "gallery">
+        <h2 class = "heading2">To-do List<span> Gallery</span></h2>
+        <div class = "gallery-container">
+            <div class = "gallery">
+                <div class = "image-column">
+					<img id = "gallery-image" src = "images/asset1.jpg" alt="Image 1">
+                    <div class = "controls">
+                        <button onclick = "prevImage()"><i class='bx bx-chevron-left'></i></button>
+                        <h2 id = "current-image">1/4</h2>
+                        <button onclick = "nextImage()"><i class='bx bx-chevron-right' ></i></button>
+                    </div>
+                </div>
+                <div class = "description-column">
+                    <div id = "description1" class = "gallery-description active">
+                        <h2>To-do List - Main page</h2>
+                        <p>The image showcases a "To-Do List" interface.</p>
+                        <p>The interface is divided into two main columns:</p>
+                        <ul class = "list">
+                            <li><strong>New Task Column (Left side):</strong></li>
+                            <ul class = "ul-column">
+                                <li>Contains a button labeled "Create a Task" which suggests users can add new tasks by clicking it.</li>
+                            </ul>
+                            <li><strong>My Tasks Column (Right side):</strong></li>
+                            <ul class = "ul-column">
+                                <li>Lists several tasks along with their due dates and categories.</li>
+                                <li>In the top right corner of this column, there are three additional buttons:</li>
+                                <ul class = "ul-btn">
+                                    <li><strong>Search button</strong> - Allows users to search the tasks by task name or task label.</li>
+                                    <li><strong>Feedback button</strong> - Enables users to send feedback to the admin for upgrades and improvements.</li>
+                                    <li><strong>Trashcan button</strong> - Enables users to delete all tasks at once from the list.</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div id = "description2" class = "gallery-description">
+                        <h2>New Task Form</h2>
+                        <p>The highlighted part of the image shows the "New Task" form.</p>
+                        <p>This form is used to create a new task and includes the following fields:</p>
+                        <ul class = "list">
+                            <li><strong>Task Name</strong> - A text field where users can enter the name of the task.</li>
+                            <li><strong>Select Task Label</strong> - A dropdown menu to choose a label for the task.</li>
+                            <li><strong>Start Date</strong> - A date picker to select the start date for the task.</li>
+                            <li><strong>Due Date</strong> - A date picker to select the due date for the task.</li>
+                            <li><strong>Add a Description</strong> - A text area where users can provide additional details about the task.</li>
+                            <li><strong>Add a Task Button</strong> - A button labeled "Add a task" for submitting the new task to the list.</li>
+                        </ul>
+                    </div>
+
+                    <div id = "description3" class = "gallery-description">
+                        <h2>Task content</h2>
+                        <p>Each task is in its own element to ensure clarity and transparency.</p>
+                        <p>Every task comprises the following components:</p>
+                        <ul class = "list">
+                            <li><strong>Checkbox button</strong> - Allows users to mark tasks as completed when checked</li>
+                            <li><strong>Task name</strong> - Displays the name of the task.</li>
+                            <li><strong>Due date</strong> - Indicates the deadline or due date for completing the task.</li>
+                            <li><strong>Buttons:</strong></li>
+                            <ul class = "ul-btn">
+                                <li><strong>Clipboard button</strong> - Displays additional information for the task.</li>
+                                <li><strong>Trashcan button</strong> - Enables users to delete individual task from the list.</li>
+                            </ul>
+                            <li><strong>Task label</strong> - Provides categorization for the task. Each label is assigned a color.</li>
+                        </ul>
+                    </div>
+
+                    <div id = "description4" class = "gallery-description">
+                        <h2>Task additional information</h2>
+                        <p>The Clipboard button, when clicked, opens a popup window with additional information about a certain task.
+                            The task description in the individual task closely resembles the information provided in the task description popup.</br>
+                            The main difference lies in the additional details featured in the popup, such as the <strong>start date</strong> and a more <strong>detailed description</strong>, 
+                            which enriches the understanding of the task's specifics.
+                        </p>
+                    </div>
+
+                    <div id = "description5" class = "gallery-description">
+                        <h2>Feedback form</h2>
+                        <p>The form pops up when the user clicks on the <strong>Feedback button.</strong></p>
+                        <p>It enables users to send feedback to the admin for upgrades and improvements.</p>
+                        <p>The form features three fields:</p>
+                        <ul class = "list">
+                            <li><strong>Full Name</strong></li>
+                            <li><strong>Email Address</strong></li>
+                            <li><strong>Feedback Textarea</strong></li>
+                        </ul>
+                        <p>This feature helps in gathering user suggestions and identifying areas for enhancement.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer design -->
+    <footer class = "footer">
+        <div class = "footer-text">
+            <p>&copy; 2024. Aleksandar Murgoski | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- custom js -->
+    <script src="js/todoList.js"></script>
+
+</body>
+</html>
