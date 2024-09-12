@@ -35,23 +35,23 @@ ScrollReveal().reveal('.about-content, .gallery-description.active', { origin: '
 
 const images = [
     {
-        src: 'asset1.jpg',
+        src: 'images/todolistweb-img/asset1.jpg',
         descriptionId: 'description1'
     },
     {
-        src:'asset2_blured.jpg',
+        src:'images/todolistweb-img/asset2_blured.jpg',
         descriptionId: 'description2'
     },
     {
-        src: 'asset4_blured.jpg',
+        src: 'images/todolistweb-img/asset4_blured.jpg',
         descriptionId: 'description3'
     },
     {
-        src: 'asset3.jpg',
+        src: 'images/todolistweb-img/asset3.jpg',
         descriptionId: 'description4'
     },
     {
-        src: 'asset5.jpg',
+        src: 'images/todolistweb-img/asset5.jpg',
         descriptionId: 'description5'
     }
 ];
