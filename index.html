@@ -46,7 +46,11 @@
     <section class = "home" id = "home">
         <div class = "home-content">
             <h3>Hello, I am</h3>
-            <h1>Aleksandar Murgoski</h1>
+            <!-- <h1>Aleksandar Murgoski</h1> -->
+
+            <h1>
+                <span class = "auto-type" style = "color: var(--main-color)"></span>
+            </h1>
 
             <div class = "social-media">
                 <a href = "#" onclick = "displayComingSoon()"><i class='bx bxl-github'></i></a>
@@ -260,6 +264,21 @@
             <a href = "#home"><i class='bx bx-up-arrow-alt' ></i></a>
         </div>
     </footer>
+
+    <script>
+        var typed = new Typed(".auto-type",{
+            strings:["Aleksandar Murgoski"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        })
+
+        var typedName = new Typed(".auto-name",{
+            strings:["Aleksandar Murgoski"],
+            typeSpeed: 100,
+        })
+
+    </script>
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
