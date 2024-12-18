@@ -48,7 +48,7 @@
             <h3>Hello, I am</h3>
             <!-- <h1>Aleksandar Murgoski</h1> -->
             
-            <h1 class = "auto-type" style = "color: var(--main-color)">.</h1>
+            <h1 class = "auto-name" style = "color: var(--main-color)"></h1>
 
             <div class = "social-media">
                 <a href = "#" onclick = "displayComingSoon()"><i class='bx bxl-github'></i></a>
@@ -263,21 +263,6 @@
         </div>
     </footer>
 
-    <script>
-        var typed = new Typed(".auto-type",{
-            strings:["Aleksandar Murgoski"],
-            typeSpeed: 100,
-            backSpeed: 50,
-            loop: true
-        })
-
-        var typedName = new Typed(".auto-name",{
-            strings:["Aleksandar Murgoski"],
-            typeSpeed: 100,
-        })
-
-    </script>
-
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -290,5 +275,20 @@
     <!-- sweetalert js -->
     <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    
+    <script>
+        /* var typed = new Typed(".auto-type",{
+            strings:["Aleksandar Murgoski"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        }) */
+
+        var typedName = new Typed(".auto-name",{
+            strings:["Aleksandar Murgoski"],
+            typeSpeed: 100,
+            loop: true
+        })
+
+    </script>
 </body>
 </html>
