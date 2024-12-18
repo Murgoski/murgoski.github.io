@@ -146,11 +146,13 @@ section{
 }
 
 @keyframes cursor {
-    50% {border-color: transparent}
+    from, to { border-color: transparent }
+    50% { border-color: var(--text-color); }
 }
 
 @keyframes typing {
-    form {width: 0}
+    from { width: 0 }
+    to { width: 100% }
 }
 
 /*SOCIAL MEDIA*/
