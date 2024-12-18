@@ -141,8 +141,18 @@ section{
     margin-bottom: .3rem;
 }
 
-.home-content p{
-    font-size: 1.6rem;
+.auto-type{
+    animation: 
+        typing 2s steps(24),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    form {width: 0;}
 }
 
 /*SOCIAL MEDIA*/
