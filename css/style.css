@@ -139,23 +139,8 @@ section{
     font-size: 4.0rem;
     font-weight: 700;
     margin-bottom: .3rem;
-    animation: 
-        typing 2s steps(24),
-        cursor .4s step-end infinite alternate;
-    border-right: 5px solid;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
-@keyframes cursor {
-    from, to { border-color: transparent }
-    50% { border-color: var(--text-color); }
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
 
 /*SOCIAL MEDIA*/
 .home-content .social-media a{
