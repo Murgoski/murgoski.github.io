@@ -143,6 +143,8 @@ section{
         typing 2s steps(24),
         cursor .4s step-end infinite alternate;
     border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @keyframes cursor {
