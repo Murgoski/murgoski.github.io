@@ -139,20 +139,18 @@ section{
     font-size: 4.0rem;
     font-weight: 700;
     margin-bottom: .3rem;
-}
-
-.auto-type{
     animation: 
         typing 2s steps(24),
         cursor .4s step-end infinite alternate;
+    border-right: 5px solid;
 }
 
 @keyframes cursor {
-    50% {border-color: transparent;}
+    50% {border-color: transparent}
 }
 
 @keyframes typing {
-    form {width: 0;}
+    form {width: 0}
 }
 
 /*SOCIAL MEDIA*/
