@@ -89,4 +89,13 @@ function prevImage() {
 
 window.onload = updateGallery;
 
+/*========== UPDATE COPYRIGHT YEAR ==========*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    var currentYear = new Date().getFullYear();
+    var getYearElement = document.getElementById("year");
+    getYearElement.textContent = currentYear; 
+});
+
+
 

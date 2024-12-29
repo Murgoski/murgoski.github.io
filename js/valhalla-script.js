@@ -18,7 +18,8 @@ window.addEventListener('click', (event) => {
     }
 });
 
-/*========== scroll reveal ==========*/
+/*========== SCROLL REVEAL ==========*/
+
 ScrollReveal({ 
     reset: true,
     distance: '80px',
@@ -30,7 +31,9 @@ ScrollReveal({
 ScrollReveal().reveal('.about-content h2, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.about-content', { origin: 'right' });
 
-/*========== disable right-click on img ==========*/
+
+/*========== DISABLE RIGHT-CLICK ON IMG ==========*/ 
+
 // Get all <img> elements on the page
 var images = document.querySelectorAll("img");
 
@@ -40,3 +43,12 @@ images.forEach(function(image) {
         e.preventDefault();
     });
 });
+
+/*========== UPDATE COPYRIGHT YEAR ==========*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    var currentYear = new Date().getFullYear();
+    var getYearElement = document.getElementById("year");
+    getYearElement.textContent = currentYear; 
+});
+
