@@ -45,6 +45,10 @@ span{
     font-weight: bold;
 }
 
+#year{
+    font-weight: none;
+}
+
 .about{
     display: flex;
     justify-content: center;
