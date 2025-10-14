@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset = "UTF-8">
+	  <meta name = "author" content = "Aleksandar Murgoski"/>
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>EMBER Dining Website Design - Project</title>
+
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "css/EMBER-website-design.css">
+
+</head>
+
+<body> 
+    <header class = "hero">
+        <div class = "hero-content">
+          <h1>EMBER Dining</h1>
+          <p>Website design and interactive prototype made in Penpot.</p>
+          <a href = "https://design.penpot.app/#/view?file-id=bd830f34-5ac9-8161-8006-ce8696121866&page-id=bd830f34-5ac9-8161-8006-ce8696121867&section=interactions&index=0&share-id=c88a5a55-d913-809f-8006-f1b9b990fda7" target = "_blank" class = "hero-button">Open Design in Penpot</a>
+        </div>
+    </header>
+
+    <!-- section design -->
+    <section class = "main-section">
+        <section class = "card fade-in">
+          <h2>About the Project</h2>
+          <p>
+            EMBER is a fictional restaurant website concept created entirely by me — from the name, brand idea, and overall visual identity to the complete website design.
+            The goal was to design a modern and elegant web experience that combines warm tones, minimalist typography, and smooth visual flow to evoke the feeling of a premium dining atmosphere.
+            The project includes desktop and mobile versions, carefully adapted for responsive behavior and optimal usability across devices.   
+          </p>
+        </section>
+    
+        <section class = "card fade-in">
+          <h2>Website Design – Desktop Version Overview</h2>
+          <img src = "images/ember-webdesign-img/EMBER-design.png" class = "zoomable" alt = "EMBER Dining Website Design" />
+        </section>
+
+        <section class = "card fade-in">
+          <h2>Things I Have Learnt</h2>
+          <p>Working on this project helped me grow creatively and technically.
+              It was also <b>my first website design</b> made with the open-source tool <b>Penpot</b>, that helped me understand the workflow between UI design and front-end development.
+          </p></br>
+
+          <p>Through this project, I learned to:</p>
+          <ul>
+            <li>Create consistent visual systems and reusable design components.</li>
+            <li>Build responsive layouts for both desktop and mobile.</li>
+            <li>Apply principles of alignment, spacing, and color contrast.</li>
+            <li>Focus on usability and user flow.</li>
+            <li>Better understand how fonts and color choices shape the overall look and feel.</li>
+          </ul>
+        </section>
+    
+        <!-- <a href = "/index.html#portfolio" class = "back-button">← Back to Projects</a> -->
+        <a href = "/#portfolio" class = "back-button">← Back to Projects</a>
+
+    </section>
+
+    <!-- footer design -->
+    <footer class = "footer">
+        <div class = "footer-text">
+            <p>&copy; <span id = "year" style="color: white;"></span>. Aleksandar Murgoski | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fullscreen zoom overlay -->
+    <div id = "zoom-overlay">
+      <img id = "zoomed-image" src = "" alt = "Zoomed-overlay" />
+      <button id = "close-zoom">&times;</button>
+    </div>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        /*========== UPDATE COPYRIGHT YEAR ==========*/
+        document.addEventListener("DOMContentLoaded", () => {
+            var currentYear = new Date().getFullYear();
+            var getYearElement = document.getElementById("year");
+            getYearElement.textContent = currentYear; 
+        });
+
+        /*========== scroll reveal ==========*/
+        ScrollReveal({ 
+            reset: true,
+            distance: '80px',
+            duration: 2000,
+            delay: 200
+
+        });
+
+        ScrollReveal().reveal('.hero-content h1, .hero-content p, .card h2', { origin: 'top' });
+        ScrollReveal().reveal('.hero-button', { origin: 'bottom' });
+        ScrollReveal().reveal('.card h4, .card p', { origin: 'left' });
+
+        /*========== Zoom overlay JS ==========*/
+        const zoomableImg = document.querySelector(".zoomable");
+        const zoomOverlay = document.getElementById("zoom-overlay");
+        const zoomedImg = document.getElementById("zoomed-image");
+        const closeBtn = document.getElementById("close-zoom");
+
+        zoomableImg.addEventListener("click", () => {
+        if (window.innerWidth > 768) return; // Only mobile
+        zoomedImg.src = zoomableImg.src;
+        zoomOverlay.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+        zoomOverlay.classList.remove("active");
+        })
+
+        zoomOverlay.addEventListener("click", (e) => {
+        if(e.target === zoomOverlay){
+          zoomOverlay.classList.remove("active");
+        }
+        })
+
+    </script>
+
+</body>
+</html>
