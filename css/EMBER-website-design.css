@@ -1,118 +1,219 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins';
 }
 
 :root{
-    --bg-color: white;
-    --text-color: #333;
-    --main-color: #1c7c96;
-    --shadow-color: rgba(0, 0, 0, .2);
+  --bg-color: white;
+  --text-color: #333;
+  --main-color: #1c7c96;
+  --shadow-color: rgba(0, 0, 0, .2);
 }
 
 html{
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /*---------------------------------------- HERO SECTION ----------------------------------------*/
 .hero {
-    background: linear-gradient(90deg, #3a6d7f, #1f3f48, #3a6d7f);
-    color: white;
-    padding: 100px 20px 60px;
-    text-align: center;
+  background: linear-gradient(90deg, #3a6d7f, #1f3f48, #3a6d7f);
+  color: white;
+  padding: 100px 20px 60px;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-inline: auto;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 .hero-button {
-    background: var(--main-color);
-    padding: 12px 28px;
-    border-radius: 2px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border: .2rem solid transparent;
-    transition: background-color .5s ease;
+  background: var(--main-color);
+  padding: 12px 28px;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: .2rem solid transparent;
+  transition: background-color .5s ease;
 }
 
 .hero-button:hover{
-    background-color: #166478;
-    color: white;
+  background-color: #166478;
+  color: white;
 }
 
 /*---------------------------------------- MAIN SECTION ----------------------------------------*/
 .main-section {
-    max-width: 1120px;  
-    margin: 40px auto;
-    padding: 0 20px;
+  max-width: 1120px;  
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .card {
-    background: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 2px;
-    box-shadow: 0 0 10px var(--shadow-color);
-    transition: transform 0.3s ease;
-    color: var(--text-color);
-    text-align: justify;
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--shadow-color);
+  transition: transform 0.3s ease;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+#desktop-section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#desktop-section.hidden{
+  display: none;
+}
+
+#mobile-section{
+  display: none;
+}
+
+#mobile-section.visible{
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: var(--text-color);
+  font-size: 1.4rem;
+ /*  margin-bottom: 15px; */
+  color: var(--text-color);
+}
+
+.card p{
+  margin-top: 15px;
 }
 
 .card ul {
-    color: var(--text-color);
-    list-style: square;
-    margin: 10px 0 0 20px;
+  color: var(--text-color);
+  list-style: square;
+  margin: 10px 0 0 20px;
 }
 
 .card li{
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+
+/* TEST */
+
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 0 0 16px 0;
+}
+
+.content-item1{
+  flex: 1;
+  /* flex-grow: 1; → how much the element will expand if more space is available
+  flex-shrink: 1; → how much the element will shrink if space runs out
+  flex-basis: 0%; → the initial “base width” before expanding */
+}
+
+.content-item2{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.desktop-mobile-btns {
+  padding: 8px 20px;
+  background: var(--main-color);
+  font-weight: 600;
+  color: white;
+  border: .2rem solid transparent;
+  border-radius: 6px;
+  transition: background-color .5s ease;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.desktop-mobile-btns:hover {
+  background: #166478;;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .content-item2 {
+    margin-bottom: 10px;
+  }
+
+  .content-item1 h2 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .content-item1 h2 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  button {
+    padding: 6px 18px;
+    font-size: 0.9rem;
+  }
+
+  img {
+    border-radius: 2px;
+  }
 }
 
 #zoom-overlay{
-    display: none;
-    position: fixed;
-    background: rgb(0, 0, 0, 0.9);
-    inset: 0;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  display: none;
+  position: fixed;
+  background: rgb(0, 0, 0, 0.9);
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 #zoom-overlay.active{
-    display: flex;
-    opacity: 1;
+  display: flex;
+  opacity: 1;
 }
 
 #zoomed-image{
@@ -125,7 +226,6 @@ img {
 #close-zoom {
   position: absolute;
   top: 20px;
-  right: 25px;
   font-size: 2rem;
   color: #fff;
   background: none;
@@ -162,18 +262,18 @@ img {
 
 /*---------------------------------------- FOOTER ----------------------------------------*/
 .footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1.2rem 7%;
-    background: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2rem 7%;
+  background: var(--main-color);
     
 }
 
 .footer-text p{
-    font-size: 0.9rem;
-    color: white;
+  font-size: 0.9rem;
+  color: white;
 }
 
 /*---------------------------------------- CUSTOM SCROLLBAR ----------------------------------------*/
@@ -210,40 +310,40 @@ img {
 /*---------------------------------------- BREAKPOINTS ----------------------------------------*/
 @media (max-width: 768px) {
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+  .hero h1 {
+      font-size: 2.2rem;
+  }
 
-    .card {
-        padding: 20px;
-    }
+  .card {
+      padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    .hero-button,
-    .back-button {
-        width: 100%;
-        display: block;
-    }
+  .hero-button,
+  .back-button {
+      width: 100%;
+      display: block;
+  }
 }
 
 @media (max-width: 991px){
 
-    .footer{
-        padding: 2rem 3%;
-    }
+  .footer{
+      padding: 2rem 3%;
+  }
 }
 
 @media (max-width: 365px){
 
-    .footer{
-        flex-direction: column-reverse;
-    }
+  .footer{
+      flex-direction: column-reverse;
+  }
 
-    .footer p{
-        text-align: center;
-        margin-top: 2rem;
-    }
+  .footer p{
+      text-align: center;
+      margin-top: 2rem;
+  }
 }
 
 /* Mobile zoom only */
