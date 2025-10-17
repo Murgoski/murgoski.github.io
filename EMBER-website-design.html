@@ -3,13 +3,13 @@
 
 <head>
     <meta charset = "UTF-8">
-	  <meta name = "author" content = "Aleksandar Murgoski"/>
+	<meta name = "author" content = "Aleksandar Murgoski"/>
     <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>EMBER Dining Website Design - Project</title>
 
     <!-- custom css -->
-    <link rel = "stylesheet" href = "css/EMBER-website-design.css">
+    <link rel = "stylesheet" href = "style.css">
 
 </head>
 
@@ -32,10 +32,32 @@
             The project includes desktop and mobile versions, carefully adapted for responsive behavior and optimal usability across devices.   
           </p>
         </section>
-    
-        <section class = "card fade-in">
-          <h2>Website Design – Desktop Version Overview</h2>
-          <img src = "images/ember-webdesign-img/EMBER-design.png" class = "zoomable" alt = "EMBER Dining Website Design" />
+        
+        <!-- <button id = "desktop-img-btn">Desktop</button>
+        <button id = "mobile-img-btn">Mobile</button> -->
+
+        <section class = "card fade-in" id = "desktop-section">
+          <div class = "content">
+            <div class = "content-item1">
+              <h2>Website Design – Desktop Version Overview</h2>
+            </div>
+            <div class = "content-item2">
+              <button type="button" id = "mobile-img-btn" class = "desktop-mobile-btns" aria-label="Show mobile design view">Mobile</button>
+            </div>
+          </div>
+          <img src = "done/EMBER-design-desktop.png" class = "zoomable" alt = "EMBER Dining Website Design" loading = "lazy"/>
+        </section>
+
+        <section class = "card fade-in" id = "mobile-section">
+          <div class = "content">
+            <div class = "content-item1">
+              <h2>Website Design – Mobile Version Overview</h2>
+            </div>
+            <div class = "content-item2">
+              <button type="button" id = "desktop-img-btn" class = "desktop-mobile-btns" aria-label="Show desktop design view">Desktop</button>
+            </div>
+          </div>
+          <img src = "done/EMBER-design-mobile.png" class = "zoomable" alt = "EMBER Dining Website Design 2" loading = "lazy"/>
         </section>
 
         <section class = "card fade-in">
@@ -72,6 +94,8 @@
       <button id = "close-zoom">&times;</button>
     </div>
 
+    <script src="script.js"></script>
+
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -92,32 +116,9 @@
 
         });
 
-        ScrollReveal().reveal('.hero-content h1, .hero-content p, .card h2', { origin: 'top' });
+        ScrollReveal().reveal('.hero-content h1, .hero-content p', { origin: 'top' });
         ScrollReveal().reveal('.hero-button', { origin: 'bottom' });
         ScrollReveal().reveal('.card h4, .card p', { origin: 'left' });
-
-        /*========== Zoom overlay JS ==========*/
-        const zoomableImg = document.querySelector(".zoomable");
-        const zoomOverlay = document.getElementById("zoom-overlay");
-        const zoomedImg = document.getElementById("zoomed-image");
-        const closeBtn = document.getElementById("close-zoom");
-
-        zoomableImg.addEventListener("click", () => {
-        if (window.innerWidth > 768) return; // Only mobile
-        zoomedImg.src = zoomableImg.src;
-        zoomOverlay.classList.add("active");
-        });
-
-        closeBtn.addEventListener("click", () => {
-        zoomOverlay.classList.remove("active");
-        })
-
-        zoomOverlay.addEventListener("click", (e) => {
-        if(e.target === zoomOverlay){
-          zoomOverlay.classList.remove("active");
-        }
-        })
-
     </script>
 
 </body>
