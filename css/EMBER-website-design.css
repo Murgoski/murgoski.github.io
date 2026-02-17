@@ -42,6 +42,7 @@ html{
 .hero-button {
   background: var(--main-color);
   padding: 12px 28px;
+  margin-left: 25px;
   border-radius: 2px;
   color: white;
   text-decoration: none;
