@@ -27,6 +27,13 @@ html{
   text-align: center;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .hero h1 {
   font-size: 2rem;
   margin-bottom: 10px;
