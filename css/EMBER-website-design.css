@@ -341,7 +341,7 @@ img {
 
   .hero-button,
   .back-button {
-      width: 80%;
+      width: 100%;
       display: block;
   }
 }
